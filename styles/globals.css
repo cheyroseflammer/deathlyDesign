@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
+@import url('https://fonts.cdnfonts.com/css/old-english-five');
+::-webkit-scrollbar {
+  display: none;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins';
+  scroll-behavior: smooth;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+* {
+  box-sizing: border-box;
+}
+button.slick-arrow.slick-next::before,
+button.slick-arrow.slick-prev::before {
+  display: none;
+}
+/* Navbar */
+.navbar nav {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: black;
+}
+nav {
+  align-items: center;
+  justify-content: center;
+}
+a {
+  list-style-type: none;
+  padding: 16px 48px;
+  font-weight: 300;
+}
+a:hover {
+  color: rgb(114, 0, 0);
+}
+.nav-btn {
+  visibility: hidden;
+}
+.nav-close-btn {
+  visibility: hidden;
+}
+/* Hero Section */
+header {
+  position: relative;
+  text-align: center;
+  padding-top: 80px;
+}
+p.title {
+  position: absolute;
+  font-family: 'Old English Five', sans-serif;
+  margin: 0;
+  font-display: swap !important;
+  font-size: 8rem;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+p.title2 {
+  position: absolute;
+  font-family: 'Old English Five', sans-serif;
+  font-display: swap !important;
+  margin: 0;
+  font-size: 4.4rem;
+  padding-top: 5rem;
+  top: 35%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+.header-image {
+  position: absolute;
+}
+h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+hr {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  width: 10rem;
+  transform: translate(-50%, -50%);
+}
+p.hero-text {
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 700px;
+  text-align: justify;
+}
+/* About */
+.about__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 70px;
+}
+.left {
+  width: 38vw;
+  padding-top: 7rem;
+}
+img.py {
+  object-fit: contain;
+}
+.left > p {
+  text-align: justify;
+}
+.right {
+  width: 38vw;
+  position: relative;
+  padding-top: 3rem;
+}
+img.about-image {
+  filter: saturate(0);
+  position: relative;
+  z-index: -1;
+}
+.right > div > h2 {
+  display: flex;
+  z-index: auto;
+  font-size: 50px;
+  flex-direction: row;
+  color: white !important;
+  font-family: 'Old English Five', sans-serif;
+  position: absolute;
+  right: 80%;
+}
+.black-text {
+  padding-left: 28px;
+  color: #050505;
+}
+/* Artist */
+.artist__container {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+}
+.artist__card {
+  margin: auto;
+  width: 200px;
+  text-align: center;
+  overflow: scroll;
+}
+p.artist-bio {
+  font-weight: 200;
+}
+img.artist-image {
+  filter: saturate(0) brightness(0.6);
+}
+img.artist-image:hover {
+  filter: saturate(1) brightness(1);
+}
+img.artist-image {
+  object-fit: cover;
+}
+.slick-dots li button:before {
+  color: white !important;
+}
+
+/* Gallery */
+.gallery__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+img.image-card {
+  filter: saturate(0);
+}
+img.image-card:hover {
+  filter: saturate(1) brightness(1);
+}
+
+/* Theme */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: #050505;
+  }
+}
+
+/* Navbar media queries */
+/* 1025px */
+@media only screen and (max-width: 1025px) {
+  /* Responsive Nav Section */
+  .nav-btn,
+  .nav-close-btn {
+    position: absolute;
+    visibility: visible;
+    background: transparent;
+    color: white;
+    border: none;
+    top: 2rem;
+    left: 2rem;
+    font-size: 16px;
+  }
+  div nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: black;
+    transform: translateY(-100vh);
+    z-index: auto;
+  }
+  .navbar .responsive__nav {
+    transition: 1s;
+    transform: none;
+  }
+  nav a {
+    font-size: 1.5rem;
+    color: white;
+  }
+  nav a:hover {
+    color: rgb(126, 21, 21);
+  }
+  /* Hero Section */
+  p.title {
+    font-size: 8rem;
+    padding-bottom: 4rem;
+  }
+  p.title2 {
+    padding: 0;
+    font-size: 6rem;
+  }
+  /* About Section */
+  .about__container {
+    margin: 0 50px;
+  }
+  .right > div > h2 {
+    font-size: 40px;
+    left: -37%;
+  }
+  .left > p {
+    font-size: 14px;
+  }
+  .left,
+  .right {
+    width: 50vw;
+  }
+  .left {
+    padding-right: 10px;
+  }
+  .right {
+    padding-right: 10px;
+    padding-top: 20px;
+  }
+  span .black-text {
+    padding-left: 20px;
+  }
+  /* Artist Section */
+  .artist__card {
+    margin-top: 0;
+    height: 400px;
+    width: 150px;
+  }
+  .hero__container {
+    padding-top: 80px;
+  }
+}
+/* 769px */
+@media only screen and (max-width: 769px) {
+  div.image-wrapper {
+    padding-top: 8rem;
+  }
+  p.title {
+    font-size: 5rem;
+  }
+  p.title2 {
+    padding: 0;
+    font-size: 3.7rem;
+  }
+  p.hero-text {
+    top: 80%;
+    width: 80%;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  hr {
+    top: 55%;
+  }
+  .right > div > h2 {
+    padding-top: 20px;
+    font-size: 30px;
+  }
+  .artist__card {
+    overflow: scroll;
+  }
+  .hero__container {
+    padding-top: 80px;
+  }
+  .about__container {
+    padding: 0;
+    padding-top: 80px;
+  }
+}
+@media only screen and (max-width: 481px) {
+  header {
+    position: initial;
+    height: 75vh;
+  }
+  .about__container {
+    height: 70vh;
+  }
+  .artist__container {
+    padding: 0px 30px 40px 30px;
+  }
+  p.title {
+    font-size: 3rem;
+    padding-bottom: 20px;
+  }
+  p.title2 {
+    font-size: 2.2rem;
+    top: 25%;
+  }
+  div.image-wrapper {
+    padding: 0;
+  }
+  h3 {
+    top: 30%;
+  }
+  hr {
+    top: 35%;
+  }
+  p.hero-text {
+    top: 56%;
+  }
+
+  .right > div > h2 {
+    font-size: 1rem;
+  }
+  .left > p {
+    position: absolute;
+    padding-right: 40px;
+  }
+}
+@media only screen and (max-width: 412px) {
+  .about__container {
+    padding: 0;
+  }
+  .artist__container {
+    padding-bottom: 90px;
+  }
+  .about__container {
+    height: 65vh;
+  }
+}
+@media only screen and (max-width: 280px) {
+  p.title {
+    font-size: 2.3rem;
+    padding-bottom: 20px;
+  }
+  p.title2 {
+    font-size: 1.7rem;
+  }
+  .hero__container {
+    height: 100vh;
+  }
+  h3 {
+    width: 100%;
+    font-size: 12px;
+  }
+  p.hero-text {
+    top: 70%;
+  }
+  .about__container {
+    margin: auto;
+    padding: 60px 20px;
+  }
+  div.right {
+    padding: 0;
+  }
+  .right > div > h2 {
+    left: -55%;
+  }
+  .left > p {
+    padding-right: 20px !important;
+  }
+  .artist__container {
+    padding-top: 90px;
+    height: 80vh;
+    margin: auto;
+  }
+}
