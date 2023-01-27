@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
-@import url('https://fonts.cdnfonts.com/css/old-english-five');
+@font-face {
+  font-family: 'Old English';
+  src: url(../assets/OldEnglishFive.ttf);
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -55,7 +59,7 @@ header {
 }
 p.title {
   position: absolute;
-  font-family: 'Old English Five', sans-serif;
+  font-family: 'Old English';
   margin: 0;
   font-display: swap !important;
   font-size: 8rem;
@@ -65,7 +69,7 @@ p.title {
 }
 p.title2 {
   position: absolute;
-  font-family: 'Old English Five', sans-serif;
+  font-family: 'Old English';
   font-display: swap !important;
   margin: 0;
   font-size: 4.4rem;
@@ -136,7 +140,7 @@ img.about-image {
   font-size: 50px;
   flex-direction: row;
   color: white !important;
-  font-family: 'Old English Five', sans-serif;
+  font-family: 'Old English';
   position: absolute;
   right: 80%;
 }
