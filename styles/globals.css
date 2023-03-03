@@ -277,8 +277,11 @@ img.image-card:hover {
   /* Artist Section */
   .artist__card {
     margin-top: 0;
-    height: 400px;
+    height: 100%;
     width: 150px;
+  }
+  .artist__card {
+    overflow: scroll;
   }
   .hero__container {
     padding-top: 80px;
@@ -310,9 +313,6 @@ img.image-card:hover {
     padding-top: 20px;
     font-size: 30px;
   }
-  .artist__card {
-    overflow: scroll;
-  }
   .hero__container {
     padding-top: 80px;
   }
@@ -330,11 +330,11 @@ img.image-card:hover {
     align-items: center;
   }
   .about__container {
-    height: 100vh;
+    height: 80vh;
   }
   .artist__container {
-    height: 100vh;
-    padding: 0px 30px 40px 30px;
+    height: 80vh;
+    padding: 0px 30px 0px 30px;
   }
   p.title {
     font-size: 3rem;
@@ -372,9 +372,6 @@ img.image-card:hover {
   .artist__container {
     padding-bottom: 90px;
   }
-  .about__container {
-    height: 65vh;
-  }
 }
 @media only screen and (max-width: 280px) {
   p.title {
@@ -392,11 +389,13 @@ img.image-card:hover {
     font-size: 12px;
   }
   p.hero-text {
-    top: 70%;
+    top: 65%;
+    font-size: 14px;
+    width: 90%;
   }
   .about__container {
     margin: auto;
-    padding: 60px 20px;
+    padding: 10px 20px 0px 10px;
   }
   div.right {
     padding: 0;
@@ -408,8 +407,7 @@ img.image-card:hover {
     padding-right: 20px !important;
   }
   .artist__container {
-    padding-top: 90px;
-    height: 80vh;
+    height: 100vh;
     margin: auto;
   }
 }
